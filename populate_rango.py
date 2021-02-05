@@ -33,7 +33,7 @@ def populate():
          'url': 'http://www.djangorocks.com',
          'views': 28},
         {'title': 'How to Tango with Django',
-         'url': 'http://www.tangowithdjango.com',
+         'url': 'http://www.tangowithdjango.com/',
          'views': 90}]
 
     other_pages = [
