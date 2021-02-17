@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rango'
+    'rango',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +56,11 @@ MIDDLEWARE = [
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 ROOT_URLCONF = 'tango_with_django_project.urls'
+REGISTRATION_OPEN = True
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = 'rango:index'
+LOGIN_URL = 'auth_login'
+
 
 TEMPLATES = [
     {
@@ -104,8 +110,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-LOGIN_URL = 'rango:login'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
